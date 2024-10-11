@@ -33,7 +33,7 @@ def compute_strategy_returns(y_test, y_pred):
     """
 
     # Initialize a DataFrame with the actual percent changes and add the model's predictions
-    df = pd.DataFrame(y_test)
+    df = pd.DataFrame(y_test, columns=["pct_change"])
     df["prediction"] = y_pred
 
     # Add columns for the real and predicted directional positions
